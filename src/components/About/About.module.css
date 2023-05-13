@@ -1,0 +1,39 @@
+.About {
+    text-size-adjust: 100px;
+}
+
+.imagen {
+    width: 830px;
+    height: 800px;
+    border-style:double;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+  
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+  
+    transform: rotateX(-20deg) rotateY(-30deg);
+    -webkit-transform: rotateX(-20deg) rotateY(-30deg);
+  
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    border-image-width: 15px;
+    border-image-source: url(/src/components/Background/RickAndMorty.jpg);
+    border-image-slice: 100;
+    border-image-repeat: repeat;
+}
+
+@keyframes spin{
+    from{
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+  
+    to{
+      transform: rotateX(0deg) rotateY(360deg);
+    }
+  }
